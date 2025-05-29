@@ -22,13 +22,8 @@
 	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/desktop-lite:1": {
-			"version": "latest",
-			"noVncVersion": "1.2.0",
-			"password": "code4life",
-			"webPort": "6080",
-			"vncPort": "5901"
-		}
+		"ghcr.io/devcontainers/features/desktop-lite:1": {},
+		"ghcr.io/va-h/devcontainers-features/uv:1": {}
 	},
 
 
@@ -47,9 +42,10 @@
 
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	//"postCreateCommand": "bash ./.jtl/setup.sh ${containerWorkspaceFolder}",
+    //"postCreateCommand": "bash ./.jtl/setup.sh ${containerWorkspaceFolder}",
+    "postCreateCommand": "uv venv .venv &&  uv pip sync",
 
-	"customizations": {
+    "customizations": {
 	    "codespaces": {
 	      "openFiles": [
 			"README.md"

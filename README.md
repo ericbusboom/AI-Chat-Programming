@@ -1,2 +1,5 @@
-# AI-Introduction
-Introduction to Neural Networks. 
+# AI Chat Programming
+
+Introduction to Programming AI Chat models. 
+
+
